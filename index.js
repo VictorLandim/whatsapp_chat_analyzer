@@ -1,17 +1,14 @@
 const processFile = require('./processFile.js');
 const makeChart = require('./chart.js');
+const { debug, groupSize } = require('./const');
 
 (async () => {
     const file = 'chat.txt';
     const origin = './data/';
     const dest = './result';
     const platform = 'ios';
-    const debug = true;
 
-    // magic number: number of members
-    const maxSize = 16;
-
-    const resultFilePath = await processFile(platform, origin, dest, file, maxSize, debug);
+    const resultFilePath = await processFile(platform, origin, dest, file, groupSize, debug);
     console.log('> File saved.');
 
     if (!debug) {

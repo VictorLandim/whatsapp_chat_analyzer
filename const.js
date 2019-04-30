@@ -9,6 +9,9 @@ require('dotenv-safe').load({
 module.exports.plotlyUser = process.env.PLOTLY_USER;
 module.exports.plotlyKey = process.env.PLOTLY_KEY;
 
+module.exports.debug = true;
+module.exports.groupSize = 16;
+
 const blockedKeywordsPt = [
     'alterou',
     'saiu',
